@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import "./App.css";
 function App() {
-  const [state, setState] = useState(0);
+  const [snakeDots, setDots] = useState([
+    [0, 0],
+    [2, 0],
+  ]);
+
   return (
     <div className="game-area">
-      <div className="snake-dot" style={{ top: 0, left: 0 }}></div>
-      <div className="snake-dot" style={{ top: 0, left: "2%" }}></div>
-      <div className="snake-dot" style={{ top: 0, left: "4%" }}></div>
+      {snakeDots.map((dot, i) => (
+        <div
+          className="snake-dot"
+          key={i}
+          style={{ left: `${dot[0]}%`, top: `${dot[1]}%` }}
+        ></div>
+      ))}
     </div>
   );
 }
