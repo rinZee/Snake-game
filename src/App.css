@@ -12,3 +12,10 @@
   background-color: #000;
   border: 1px solid #fff;
 }
+.food-dot {
+  position: absolute;
+  height: 2%;
+  width: 2%;
+  background-color: green;
+  border: 1px solid #fff;
+}
